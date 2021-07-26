@@ -2,6 +2,7 @@ import {listenEvents, getEventDetail, getEventUser, mergeEvents, Events} from '.
 
 const bootEvents = () => {
     return {
+        mergeEvents: mergeEvents,
         listenEvents: listenEvents,
         events: () => Events,
     }
