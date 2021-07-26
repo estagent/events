@@ -1,7 +1,7 @@
 export const Events = {}
 
 export const getEventDetail = (event, key, def) =>
-    event.detail ? (event.detail.key ? key : def) : def
+    (event.detail ? (event.detail.hasOwnProperty(key) ? event.detail[key] : def) : def)
 
 export const getEventUser = event => {
     if (!event.detail) if (!user) throw `detail not found in ${event.type}`

@@ -1,7 +1,7 @@
 {
   "name": "@revgaming/events",
   "author": "estagent <estagent@gmail.com>",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "homepage": "https://github.com/estagent/events",
   "description": "helper functions",
   "main": "src/index.js",
