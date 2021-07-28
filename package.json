@@ -1,9 +1,9 @@
 {
   "name": "@revgaming/events",
   "author": "estagent <estagent@gmail.com>",
-  "version": "1.0.5",
+  "version": "5.0.2",
   "homepage": "https://github.com/estagent/events",
-  "description": "helper functions",
+  "description": "global events",
   "main": "src/index.js",
   "keywords": [
     "javascript",
