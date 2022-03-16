@@ -13,6 +13,17 @@ export const UserAuthenticated = detail => {
         new CustomEvent(Events.UserAuthenticated, {detail: detail}),
     )
 }
+
+export const dispatchInitialised = (App) => {
+    window.dispatchEvent(
+        new CustomEvent(Events.AppInitialised, {detail: {App: App}}),
+    )
+    return this
+}
+
+export const dispatchBootstrap = () =>
+    window.dispatchEvent(new Event(Events.AppBootstrap))
+
 export const UserSignedOut = () => {
     window.dispatchEvent(new Event(Events.UserSignedOut))
 }
