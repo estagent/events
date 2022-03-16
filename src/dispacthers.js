@@ -1,47 +1,61 @@
 import Events from './events'
 
-export const dispatchUserUnmounted = () => {
-  window.dispatchEvent(new Event(Events.UserUnmounted))
+export const UserUnmounted = () => {
+    window.dispatchEvent(new Event(Events.UserUnmounted))
 }
 
-export const dispatchUserMounted = detail => {
-  window.dispatchEvent(new CustomEvent(Events.UserMounted, {detail: detail}))
+export const UserMounted = detail => {
+    window.dispatchEvent(new CustomEvent(Events.UserMounted, {detail: detail}))
 }
 
-export const dispatchUserAuthenticated = detail => {
-  window.dispatchEvent(
-    new CustomEvent(Events.UserAuthenticated, {detail: detail}),
-  )
+export const UserAuthenticated = detail => {
+    window.dispatchEvent(
+        new CustomEvent(Events.UserAuthenticated, {detail: detail}),
+    )
 }
-export const dispatchUserSignedOut = () => {
-  window.dispatchEvent(new Event(Events.UserSignedOut))
+export const UserSignedOut = () => {
+    window.dispatchEvent(new Event(Events.UserSignedOut))
 }
 
 export const dispatchUserUpdated = detail => {
-  window.dispatchEvent(new CustomEvent(Events.UserUpdated, {detail: detail}))
+    window.dispatchEvent(new CustomEvent(Events.UserUpdated, {detail: detail}))
 }
 
-/**
- * Session events
- */
-
-export const dispatchSessionMounted = () => {
-  window.dispatchEvent(new Event(Events.SessionMounted))
+export const SessionMounted = () => {
+    window.dispatchEvent(new Event(Events.SessionMounted))
 }
 
-export const dispatchSessionRefreshed = detail => {
-  window.dispatchEvent(
-    new CustomEvent(Events.SessionRefreshed, {detail: detail}),
-  )
+export const SessionRefreshed = detail => {
+    window.dispatchEvent(
+        new CustomEvent(Events.SessionRefreshed, {detail: detail}),
+    )
+}
+export const TokenMismatched = (response) => {
+    window.dispatchEvent(
+        new CustomEvent(Events.TokenMismatched, {
+            detail: {
+                response: response,
+            },
+        }),
+    )
+}
+export const AuthorizationFailed = (response) => {
+    window.dispatchEvent(
+        new CustomEvent(Events.AuthorizationFailed, {
+            detail: {
+                response: response,
+            },
+        }),
+    )
 }
 
 
-export const dispatchSessionInitialised = () => {
-  window.dispatchEvent(new Event(Events.SessionInitialized))
+export const SessionInitialised = () => {
+    window.dispatchEvent(new Event(Events.SessionInitialized))
 }
-export const dispatchSessionCreated = () => {
-  window.dispatchEvent(new Event(Events.SessionCreated))
+export const SessionCreated = () => {
+    window.dispatchEvent(new Event(Events.SessionCreated))
 }
-export const dispatchSessionDestroyed = () => {
-  window.dispatchEvent(new Event(Events.SessionDestroyed))
+export const SessionDestroyed = () => {
+    window.dispatchEvent(new Event(Events.SessionDestroyed))
 }
