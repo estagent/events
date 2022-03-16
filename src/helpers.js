@@ -1,3 +1,4 @@
+import Events from "./events";
 export const getEventDetail = (event, key, def) =>
     (event.detail ? (event.detail.hasOwnProperty(key) ? event.detail[key] : def) : def)
 

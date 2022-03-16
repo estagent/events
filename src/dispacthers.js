@@ -21,6 +21,16 @@ export const dispatchInitialised = (App) => {
     return this
 }
 
+export const WalletExpired = () =>
+    window.dispatchEvent(new Event(Events.WalletExpired))
+
+export const WalletChanged = (wallet) =>
+    window.dispatchEvent(new CustomEvent(Events.UserUpdated, {
+        detail: {
+            wallet: wallet,
+        }
+    }))
+
 export const dispatchBootstrap = () =>
     window.dispatchEvent(new Event(Events.AppBootstrap))
 
