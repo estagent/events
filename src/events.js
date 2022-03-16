@@ -17,6 +17,7 @@ export default {
     CurrencyChanged: 'currency-changed',
     CountryChanged: 'country-changed',
     TimeZoneChanged: 'timezone-changed',
+    AppearanceChanged: 'appearance-changed',
     SoundMuted: 'sound-muted',
     SoundActivated: 'sound-activated',
     LanguageChanged: 'language-changed',
