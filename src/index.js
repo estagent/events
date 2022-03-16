@@ -1,4 +1,27 @@
-export const Events = {}
+export const Events = {
+    AppBootstrap: 'app:bootstrap',
+    AppInitialised: 'app:initialised',
+    UserUpdated: 'user-updated',
+    UserMounted: 'user-mounted',
+    UserUnmounted: 'user-unmounted',
+    SessionInitialized: 'session-initialized',
+    SessionCreated: 'session-created',
+    SessionMounted: 'session-mounted',
+    SessionRefreshed: 'session-refreshed',
+    SessionInvalidated: 'session-invalidated',
+    SessionDestroyed: 'session-destroyed',
+    UserAuthenticated: 'user-authenticated',
+    UserSignedOut: 'user-signed-out',
+    AuthenticationExpired: 'authentication-expired',
+    WalletChanged: 'wallet-changed',
+    CurrencyChanged: 'currency-changed',
+    CountryChanged: 'country-changed',
+    TimeZoneChanged: 'timezone-changed',
+    SoundMuted: 'sound-muted',
+    SoundActivated: 'sound-activated',
+    LanguageChanged: 'language-changed',
+    PreferencesChanged: 'preferences-changed',
+}
 
 export const getEventDetail = (event, key, def) =>
     (event.detail ? (event.detail.hasOwnProperty(key) ? event.detail[key] : def) : def)
