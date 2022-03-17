@@ -17,10 +17,10 @@ export default {
     TimeZoneChanged: 'timezone-changed',
     TokenMismatched: 'token-mismatched',
     UserAuthenticated: 'user-authenticated',
+    UserChanged: 'user-changed',
     UserMounted: 'user-mounted',
     UserSignedOut: 'user-signed-out',
     UserUnmounted: 'user-unmounted',
-    UserUpdated: 'user-updated',
     WalletChanged: 'wallet-changed',
     WalletExpired: 'wallet-expired',
 }
