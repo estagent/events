@@ -1,5 +1,5 @@
 export default {
-    AppBootstrap: 'app:bootstrap',
+    AppBoot: 'app:boot',
     AppearanceChanged: 'appearance-changed',
     AppInitialised: 'app:initialised',
     AuthorizationFailed: 'authorization-failed',
@@ -21,6 +21,7 @@ export default {
     UserMounted: 'user-mounted',
     UserSignedOut: 'user-signed-out',
     UserUnmounted: 'user-unmounted',
-    WalletChanged: 'wallet-changed',
+    WalletChanged: 'wallet-changed', // wallet type change
     WalletExpired: 'wallet-expired',
+    WalletUpdated: 'wallet-updated',
 }

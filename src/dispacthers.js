@@ -1,5 +1,17 @@
 import Events from './events'
 
+export const Boot = () =>
+    window.dispatchEvent(new Event(Events.AppBoot))
+
+
+export const Initialised = (App) => {
+    window.dispatchEvent(
+        new CustomEvent(Events.AppInitialised, {detail: {App: App}}),
+    )
+}
+
+
+
 export const UserUnmounted = () => {
     window.dispatchEvent(new Event(Events.UserUnmounted))
 }
@@ -19,12 +31,6 @@ export const UserAuthenticated = detail => {
     )
 }
 
-export const dispatchInitialised = (App) => {
-    window.dispatchEvent(
-        new CustomEvent(Events.AppInitialised, {detail: {App: App}}),
-    )
-    return this
-}
 
 export const WalletExpired = () =>
     window.dispatchEvent(new Event(Events.WalletExpired))
@@ -36,8 +42,12 @@ export const WalletChanged = (wallet) =>
         }
     }))
 
-export const dispatchBootstrap = () =>
-    window.dispatchEvent(new Event(Events.AppBootstrap))
+export const WalletUpdated = (wallet) =>
+    window.dispatchEvent(new CustomEvent(Events.WalletUpdated, {
+        detail: {
+            wallet: wallet,
+        }
+    }))
 
 export const UserSignedOut = () => {
     window.dispatchEvent(new Event(Events.UserSignedOut))
